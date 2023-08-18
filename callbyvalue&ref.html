@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+       /* function goToHell(){
+            var  a=20,b=30;
+            console.log("before calling a function:"+a,b);
+            callByValue(a,b);
+            console.log("after calling the functiona,b are:"+a,b);
+        
+        }
+        function callByValue(newa,newb){
+            console.log("we are inside the function"+newa,+newb);
+            console.log("newa="+newa+" newb="+newb);
+        }*/
+        function goToHell(){
+            var obj={a:100};
+            console.log("before calling a function:"+obj.a);
+            callByReference(obj);
+            console.log("after calling the function obj's a is:"+obj.a);
+        }
+        function callByReference(newa){
+            console.log("we are inside the function"+newa);
+            newa.a=1;
+            console.log("newa="+newa);
+        }
+    </script>
+</head>
+<body>
+    <h1> we are seeing call by value & call by references</h1>
+    <button onclick="goToHell()">Submit</button>
+</body>
+</html>
